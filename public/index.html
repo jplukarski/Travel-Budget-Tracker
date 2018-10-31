@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Travel Budget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="header" class="row">
+            <div class="col-md-3">
+                <h3>Travel Budget App</h3>
+            </div>
+        </div>
+
+        <div class="row new-entry" id="first">
+            <div class="col">
+                <div>City:</div>
+                <input type="text" id="new-city">
+                <div>Nights Stayed:</div>
+                <input type="text" id="nights-stayed">
+                <div>Amount Spent:</div>
+                <input type="number" step="0.01" id="amount-spent">
+                <div class="bottom row">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="custom-select">Currency</label>
+                        </div>
+                        <select class="custom-select" id="current">
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </div>
+                    <button id="submit">Submit Info</button>
+                </div>
+            </div>
+
+            <div class="second row">
+
+                <div class="col">
+
+                    <table id="summary">
+                        <tr>
+                            <th>Total Spent</th>
+                            <th>Currency</th>
+                        </tr>
+                        <tr>
+                            <th id="total-spent"></th>
+                            <th> <select class="custom-select" id="total-currency" onchange="myFunction()">
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                </select></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container row" id="data-display">
+
+            <div>
+            </div>
+
+
+            <table id="data-dump">
+                <tr>
+                    <th>City</th>
+                    <th>Nights Stayed</th>
+                    <th>Amount Spent</th>
+                    <th>Currency</th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
